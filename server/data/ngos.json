@@ -1,0 +1,47 @@
+[
+  {
+    "id": "NGO-01",
+    "name": "Save Speechless Animals Foundation (SSAF Nagpur)",
+    "regId": "MH/NGP/2018/00341",
+    "ownerName": "Smita Mire",
+    "email": "ssaf@nagpurrescue.org",
+    "phone": "+91 98230 45671",
+    "address": "Near Besa-Pipla Road, South Nagpur, Maharashtra - 440037",
+    "latitude": 21.0872,
+    "longitude": 79.0915,
+    "operatingHours": "24/7 Emergency Animal Ambulance",
+    "capacity": 50,
+    "activeRescues": 3,
+    "description": "Dedicated animal rescue trust in South Nagpur with 24-hour critical ambulance, trauma surgery unit, and recovery shelter."
+  },
+  {
+    "id": "NGO-02",
+    "name": "People For Animals (PFA) Nagpur",
+    "regId": "MH/NGP/2012/00189",
+    "ownerName": "Karishma Galani",
+    "email": "pfa@nagpurrescue.org",
+    "phone": "+91 98222 12345",
+    "address": "Wardha Road, Dhantoli / Congress Nagar, Central Nagpur, Maharashtra - 440012",
+    "latitude": 21.1315,
+    "longitude": 79.0805,
+    "operatingHours": "08:00 AM - 10:00 PM (Emergency unit on-call)",
+    "capacity": 65,
+    "activeRescues": 3,
+    "description": "Multi-species rescue shelter providing emergency inpatient care, veterinary surgery, and rehabilitation in Central Nagpur."
+  },
+  {
+    "id": "NGO-03",
+    "name": "Nagpur Paws Animal Rescue & Care Shelter",
+    "regId": "MH/NGP/2020/00512",
+    "ownerName": "Tanmay Sharma",
+    "email": "paws@nagpurrescue.org",
+    "phone": "+91 98901 88992",
+    "address": "Near Futala Lake Road, Dharampeth / West Nagpur, Maharashtra - 440010",
+    "latitude": 21.1558,
+    "longitude": 79.0532,
+    "operatingHours": "07:00 AM - 11:00 PM",
+    "capacity": 40,
+    "activeRescues": 2,
+    "description": "Community animal welfare foundation focusing on emergency street dog rescue, cat treatment, and ABC sterilization in West Nagpur."
+  }
+]

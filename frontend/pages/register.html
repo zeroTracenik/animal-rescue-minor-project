@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Account — Animal Rescue Connect</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <div class="brand-badge">
+          <i class="bi bi-shield-heart-fill"></i>
+        </div>
+        <div>
+          <span class="brand-font fw-bold text-dark fs-5">Animal Rescue Connect</span>
+        </div>
+      </a>
+
+      <div class="ms-auto">
+        <a href="/" class="btn btn-sm btn-outline-custom"><i class="bi bi-arrow-left me-1"></i> Back to Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-9 col-lg-7">
+
+        <div class="card arc-card p-4 p-md-5 border-0 shadow-lg">
+          <div class="text-center mb-4">
+            <div class="brand-badge mx-auto mb-3" style="width:54px;height:54px;font-size:1.6rem;">
+              <i class="bi bi-person-plus-fill"></i>
+            </div>
+            <h3 class="fw-bold mb-1">Create an Account</h3>
+            <p class="text-muted small">Join our network as a citizen, rescue NGO, or field volunteer</p>
+          </div>
+
+          <form id="registerForm" onsubmit="handleRegisterSubmit(event)">
+            <!-- Account Information -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name / Primary Contact <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Rahul Sharma" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@domain.com" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"><i class="bi bi-telephone"></i></span>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91 98230 12345" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text bg-light text-muted"><i class="bi bi-shield-lock"></i></span>
+                <input type="password" class="form-control" id="password" name="password" minlength="6" placeholder="At least 6 characters" required>
+              </div>
+              <div class="form-text small">Encrypted and protected with secure bcrypt hashing.</div>
+            </div>
+
+            <!-- Role Selector (Admin registration strictly removed) -->
+            <div class="mb-4">
+              <label for="role" class="form-label">Register As <span class="text-danger">*</span></label>
+              <select class="form-select" id="role" name="role" onchange="toggleNgoFields()" required>
+                <option value="citizen" selected>Citizen / Community Bystander</option>
+                <option value="volunteer">Rescue Volunteer / Field Responder</option>
+                <option value="ngo">Animal Rescue NGO / Shelter Organization</option>
+              </select>
+            </div>
+
+            <!-- Dedicated NGO Verification & Location Block (Dynamic) -->
+            <div id="ngoFieldsContainer" class="d-none border rounded-3 p-3 p-md-4 bg-light mb-4">
+              <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom">
+                <i class="bi bi-hospital text-teal fs-5" style="color:#0d9488;"></i>
+                <h5 class="fw-bold mb-0 text-dark">NGO Registration & Location Details</h5>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="ngoRegId" class="form-label">NGO Registered ID / Trust Reg. No. <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="ngoRegId" name="ngoRegId" placeholder="e.g. MH/NGP/2019/00482">
+                  <div class="form-text small">Government or Charity Commissioner registration number.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="ngoOwnerName" class="form-label">Name of NGO Owner / President / Trustee <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="ngoOwnerName" name="ngoOwnerName" placeholder="e.g. Dr. Rajesh Agrawal">
+                </div>
+
+                <div class="col-12">
+                  <label for="ngoAddress" class="form-label">Shelter / Clinic Address (Nagpur) <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="ngoAddress" name="ngoAddress" placeholder="e.g. Plot 18, Near Besa Square, Wardha Road, South Nagpur">
+                </div>
+
+                <!-- Live Location for NGO -->
+                <div class="col-12">
+                  <label class="form-label fw-bold">NGO Shelter Live Location <span class="text-danger">*</span></label>
+                  <div class="p-3 bg-white rounded-3 border d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <div>
+                      <div class="small fw-semibold text-dark"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Capture Exact Facility Coordinates</div>
+                      <div class="text-muted" style="font-size:0.8rem;">Used to match nearby animal emergency calls automatically.</div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-outline-custom" id="btnNgoLocation" onclick="captureNgoLocation()">
+                      <i class="bi bi-crosshair me-1 text-primary"></i> Detect Current Location
+                    </button>
+                  </div>
+                  <div id="ngoCoordBadge" class="alert alert-success d-none py-2 my-2 small"></div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="ngoLatitude" class="form-label small text-muted">Shelter Latitude</label>
+                  <input type="number" step="any" class="form-control form-control-sm bg-white" id="ngoLatitude" name="ngoLatitude" placeholder="21.1458">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="ngoLongitude" class="form-label small text-muted">Shelter Longitude</label>
+                  <input type="number" step="any" class="form-control form-control-sm bg-white" id="ngoLongitude" name="ngoLongitude" placeholder="79.0882">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="btnRegister" class="btn btn-primary-custom w-100 py-2 fs-6 mb-3">
+              Register Account
+            </button>
+          </form>
+
+          <div class="text-center small text-muted">
+            Already have an account? <a href="/pages/login.html" class="fw-semibold text-primary">Sign In</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>
+    function toggleNgoFields() {
+      const role = document.getElementById('role').value;
+      const ngoBlock = document.getElementById('ngoFieldsContainer');
+      const ngoRegId = document.getElementById('ngoRegId');
+      const ngoOwnerName = document.getElementById('ngoOwnerName');
+      const ngoAddress = document.getElementById('ngoAddress');
+
+      if (role === 'ngo') {
+        ngoBlock.classList.remove('d-none');
+        ngoRegId.setAttribute('required', 'required');
+        ngoOwnerName.setAttribute('required', 'required');
+        ngoAddress.setAttribute('required', 'required');
+      } else {
+        ngoBlock.classList.add('d-none');
+        ngoRegId.removeAttribute('required');
+        ngoOwnerName.removeAttribute('required');
+        ngoAddress.removeAttribute('required');
+      }
+    }
+
+    function captureNgoLocation() {
+      const btn = document.getElementById('btnNgoLocation');
+      const latInput = document.getElementById('ngoLatitude');
+      const lonInput = document.getElementById('ngoLongitude');
+      const addrInput = document.getElementById('ngoAddress');
+      const badge = document.getElementById('ngoCoordBadge');
+
+      if (!navigator.geolocation) {
+        showToast('Geolocation is not supported by your browser.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span>Detecting GPS...';
+
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          latInput.value = lat.toFixed(5);
+          lonInput.value = lon.toFixed(5);
+
+          badge.classList.remove('d-none');
+          badge.innerHTML = `<i class="bi bi-check-circle-fill text-success me-1"></i> Shelter GPS Pinned: Lat ${lat.toFixed(4)}, Lon ${lon.toFixed(4)}`;
+
+          try {
+            const geoRes = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+            const geoData = await geoRes.json();
+            if (geoData && geoData.display_name && !addrInput.value) {
+              addrInput.value = geoData.display_name.split(',').slice(0, 4).join(',');
+            }
+          } catch(e) {}
+
+          btn.disabled = false;
+          btn.innerHTML = '<i class="bi bi-check2 me-1 text-success"></i> Captured';
+          showToast('NGO Shelter GPS captured successfully!', 'success');
+        },
+        (err) => {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="bi bi-crosshair me-1"></i> Detect Current Location';
+          showToast('Could not fetch GPS. Please enter coordinates or address manually.', 'error');
+        },
+        { enableHighAccuracy: true, timeout: 8000 }
+      );
+    }
+  </script>
+</body>
+</html>

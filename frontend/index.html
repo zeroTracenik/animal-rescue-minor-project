@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Rescue Connect — One Report Can Save a Life</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Community Announcement Notice -->
+  <div class="announcement-banner text-center" style="background: linear-gradient(90deg, #042f2e, #0f766e);">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <i class="bi bi-shield-check text-warning me-1"></i>
+        <strong>24/7 Community Animal Rescue Network:</strong> Connecting citizens, veterinary hospitals, and rescue volunteers in real time.
+      </div>
+      <div>
+        <a href="/pages/report.html" class="text-white text-decoration-underline">Report Emergency Incident <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <div class="brand-badge">
+          <i class="bi bi-shield-heart-fill"></i>
+        </div>
+        <div>
+          <span class="brand-font fw-bold text-dark fs-5">Animal Rescue Connect</span>
+          <span class="d-none d-sm-block fw-semibold" style="font-size: 0.75rem; margin-top: -3px; color: #475569 !important;">One Report Can Save a Life</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link active" href="/"><i class="bi bi-house me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/report.html"><i class="bi bi-plus-circle me-1 text-danger"></i>Report Animal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/track.html"><i class="bi bi-geo-alt me-1"></i>Track Case</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/cases.html"><i class="bi bi-card-checklist me-1"></i>Rescue Cases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbar-auth-section">
+          <!-- Dynamically populated by main.js: Login/Register or User Dropdown -->
+          <a href="/pages/login.html" class="btn btn-outline-custom py-1 px-3">Login</a>
+          <a href="/pages/register.html" class="btn btn-primary-custom py-1 px-3">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill">
+            <span class="badge bg-danger rounded-pill px-2 py-1">SOS</span>
+            <span style="color: #0f766e; font-weight: 700;">24/7 Community Animal Rescue Network</span>
+          </div>
+
+          <h1 class="hero-title">
+            One Report Can <br>
+            <span class="highlight">Save a Life.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Report an injured, sick or vulnerable animal and help connect it with nearby rescue support, shelters and volunteer ambulances in real time.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="/pages/report.html" class="btn btn-primary-custom btn-lg">
+              <i class="bi bi-exclamation-triangle-fill"></i> Report an Animal
+            </a>
+            <a href="/pages/track.html" class="btn btn-outline-custom btn-lg">
+              <i class="bi bi-search"></i> Track a Case
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 pt-2 small fw-semibold flex-wrap" style="color: #334155;">
+            <div><i class="bi bi-check-circle-fill text-success me-1"></i> No login required to report</div>
+            <div><i class="bi bi-check-circle-fill text-success me-1"></i> Live GPS matching</div>
+            <div><i class="bi bi-check-circle-fill text-success me-1"></i> End-to-end audit</div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-image-card">
+            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=900&q=80" alt="Rescued Street Dog" class="img-fluid">
+            
+            <div class="floating-stat-card">
+              <div class="stat-icon bg-success-subtle text-success mb-0" style="width:42px;height:42px;">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <div>
+                <div class="fw-bold text-dark fs-6">1,420+ Animals Rescued</div>
+                <div class="small fw-semibold" style="color: #475569;">Via community reports</div>
+              </div>
+            </div>
+
+            <div class="floating-stat-card-2">
+              <i class="bi bi-lightning-charge-fill text-warning me-1"></i> Response: ~18 mins
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="py-5 bg-white border-bottom border-top">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge px-3 py-1 rounded-pill mb-2" style="background: #e2e8f0; color: #1e293b; font-weight: 700;">Platform Activity</span>
+        <h3 class="fw-bold mb-1 text-dark">Impact at a Glance</h3>
+        <p class="small mb-0" style="color: #475569; font-weight: 500;">Verified response metrics across our partner shelter network</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="stat-box text-center">
+            <div class="stat-icon bg-primary-subtle text-primary mx-auto">
+              <i class="bi bi-clipboard2-pulse"></i>
+            </div>
+            <div class="stat-number" id="homeStatReported">1,482</div>
+            <div class="stat-label">Animals Reported</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="stat-box text-center">
+            <div class="stat-icon bg-success-subtle text-success mx-auto">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div class="stat-number" id="homeStatRescued">1,240</div>
+            <div class="stat-label">Cases Rescued</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="stat-box text-center">
+            <div class="stat-icon mx-auto" style="background:#fef3c7; color:#b45309; width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:1rem;">
+              <i class="bi bi-hourglass-split"></i>
+            </div>
+            <div class="stat-number" id="homeStatActive">38</div>
+            <div class="stat-label">Active Cases</div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="stat-box text-center">
+            <div class="stat-icon bg-info-subtle text-info mx-auto">
+              <i class="bi bi-building"></i>
+            </div>
+            <div class="stat-number" id="homeStatPartners">14</div>
+            <div class="stat-label">Rescue Partners & NGOs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="badge px-3 py-1 rounded-pill fw-bold mb-2" style="background:#ccfbf1; color:#0f766e; font-size: 0.85rem;">Structured Workflow</span>
+        <h2 class="fw-bold text-dark">How It Works</h2>
+        <p class="fw-normal" style="color: #334155; font-size: 1.05rem;">From spot to recovery: how technology connects compassionate citizens with local field teams in four easy steps.</p>
+      </div>
+
+      <div class="row g-4 position-relative">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon"><i class="bi bi-camera-fill"></i></div>
+            <h5 class="fw-bold mb-2">1. Report</h5>
+            <p class="small mb-0" style="color: #334155;">Citizen captures an animal in need, shares live GPS coordinates, condition and a photo without needing to register.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <h5 class="fw-bold mb-2">2. Find Nearby Rescue</h5>
+            <p class="small mb-0" style="color: #334155;">Our Haversine spatial algorithm compares report coordinates with registered NGOs to automatically find the nearest facility.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon"><i class="bi bi-person-walking"></i></div>
+            <h5 class="fw-bold mb-2">3. Volunteer Assigned</h5>
+            <p class="small mb-0" style="color: #334155;">NGO reviews triage priority and dispatches an available field responder equipped with carrier or medical kit.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon"><i class="bi bi-heart-fill"></i></div>
+            <h5 class="fw-bold mb-2">4. Animal Rescued</h5>
+            <p class="small mb-0" style="color: #334155;">The animal receives veterinary care, wound dressing, shelter and rehabilitation with transparent status tracking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Highlight Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="emergency-banner">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill text-white mb-3 small fw-bold" style="background: rgba(255, 255, 255, 0.22); border: 1px solid rgba(255, 255, 255, 0.35);">
+              <i class="bi bi-bell-fill text-warning"></i> Emergency Animal Support Hotline
+            </div>
+            <h2 class="display-6 fw-bold mb-3 text-white">Found an animal in danger?</h2>
+            <p class="fs-5 mb-4 text-white" style="max-width: 650px; opacity: 0.96; line-height: 1.6;">
+              Share the location and condition so the rescue team can understand the situation quickly and dispatch immediate help.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="/pages/report.html" class="btn btn-light btn-lg text-danger fw-bold shadow">
+                <i class="bi bi-plus-circle-fill me-1"></i> Report Now
+              </a>
+              <a href="tel:1800000192" class="btn btn-outline-light btn-lg fw-semibold text-white">
+                <i class="bi bi-telephone-fill me-1"></i> Emergency Helpline: 1800-RESCUE-00
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 text-center text-lg-end">
+            <div class="p-4 rounded-4 text-start shadow-sm" style="background: rgba(0, 0, 0, 0.3); border: 1.5px solid rgba(255, 255, 255, 0.3);">
+              <h6 class="fw-bold text-white mb-2"><i class="bi bi-shield-exclamation me-1 text-warning"></i> Quick Response Tips</h6>
+              <ul class="text-white small mb-0 ps-3" style="line-height: 1.7; opacity: 0.95;">
+                <li class="mb-1">Keep a safe distance from frightened animals</li>
+                <li class="mb-1">Pin your exact location using the GPS button</li>
+                <li class="mb-1">Take a clear photo showing visible injuries</li>
+                <li>Stay nearby until rescue contact confirms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Rescue Cases Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+        <div>
+          <span class="badge px-3 py-1 rounded-pill mb-2" style="background: #e2e8f0; color: #1e293b; font-weight: 700;">Community Feed</span>
+          <h2 class="fw-bold mb-1 text-dark">Recent Rescue Cases</h2>
+          <p class="small mb-0" style="color: #475569; font-weight: 500;">Browse real-time status updates of animals reported across the city</p>
+        </div>
+        <a href="/pages/cases.html" class="btn btn-outline-custom">
+          View All Cases <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <!-- Recent Cases Grid (Populated dynamically) -->
+      <div class="row g-4" id="homeRecentCasesGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <div class="brand-badge" style="width:36px;height:36px;font-size:1.1rem;">
+              <i class="bi bi-shield-heart-fill"></i>
+            </div>
+            <h5 class="fw-bold text-white mb-0">Animal Rescue Connect</h5>
+          </div>
+          <p class="small mb-3" style="color: #cbd5e1; line-height: 1.65;">
+            “One Report Can Save a Life.” A dedicated animal welfare platform designed to connect citizens, shelter hospitals, and volunteers to save injured and vulnerable animals.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="fs-5" style="color: #cbd5e1;"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fs-5" style="color: #cbd5e1;"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="fs-5" style="color: #cbd5e1;"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="fs-5" style="color: #cbd5e1;"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="/"><i class="bi bi-chevron-right me-1 small"></i>Home</a></li>
+            <li class="mb-2"><a href="/pages/report.html"><i class="bi bi-chevron-right me-1 small"></i>Report Animal</a></li>
+            <li class="mb-2"><a href="/pages/track.html"><i class="bi bi-chevron-right me-1 small"></i>Track Case</a></li>
+            <li class="mb-2"><a href="/pages/cases.html"><i class="bi bi-chevron-right me-1 small"></i>Rescue Cases</a></li>
+            <li class="mb-2"><a href="/pages/about.html"><i class="bi bi-chevron-right me-1 small"></i>About Platform</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h5>Rescue Priorities</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><span class="badge bg-danger text-white me-1">Critical</span> <span style="color: #cbd5e1;">Open trauma, severe hit & run</span></li>
+            <li class="mb-2"><span class="badge bg-warning text-dark me-1">Urgent</span> <span style="color: #cbd5e1;">Deep wounds, fractures, drain trap</span></li>
+            <li class="mb-2"><span class="badge bg-primary text-white me-1">Moderate</span> <span style="color: #cbd5e1;">Skin infections, mange, limps</span></li>
+            <li class="mb-2"><span class="badge bg-success text-white me-1">Low</span> <span style="color: #cbd5e1;">Abandoned litter, shelter care</span></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Emergency Info</h5>
+          <p class="small mb-2" style="color: #cbd5e1;"><i class="bi bi-geo-alt-fill me-2 text-danger"></i> Central Dispatch Zone, Nagpur, Maharashtra</p>
+          <p class="small mb-2" style="color: #cbd5e1;"><i class="bi bi-telephone-fill me-2 text-success"></i> 24/7 Helpline: 1800-RESCUE-00</p>
+          <p class="small mb-3" style="color: #cbd5e1;"><i class="bi bi-envelope-fill me-2 text-info"></i> contact@animalrescueconnect.org</p>
+          <div class="p-2 rounded-2 text-wrap text-start" style="background: rgba(255,255,255,0.08); color: #5eead4; border: 1px solid rgba(255,255,255,0.14); font-size: 0.8rem; font-weight: 500;">
+            <i class="bi bi-shield-check me-1"></i> Certified Community Animal Care Network
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2" style="color: #94a3b8; border-top: 1px solid #1e293b;">
+        <div>&copy; 2026 Animal Rescue Connect. All rights reserved.</div>
+        <div>Protecting stray and vulnerable animals through community coordination.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+  <script>
+    // Load dynamic recent cases on home page
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await apiRequest('/api/reports');
+        if (res.ok && res.data.success) {
+          const reports = res.data.reports.slice(0, 6);
+          const grid = document.getElementById('homeRecentCasesGrid');
+          if (grid) {
+            let html = '';
+            reports.forEach(c => {
+              html += `
+                <div class="col-md-6 col-lg-4">
+                  <div class="case-card">
+                    <div class="position-relative">
+                      <img src="${c.photoUrl}" class="case-card-img" alt="${c.animalType}" onerror="this.src='/public/images/cases/case-1021.jpg'">
+                      <div class="position-absolute top-0 start-0 m-2">
+                        ${getPriorityBadge(c.priority)}
+                      </div>
+                      <div class="position-absolute top-0 end-0 m-2">
+                        <span class="badge text-white font-monospace py-1 px-2 rounded-2 shadow-sm" style="background-color: rgba(15, 23, 42, 0.95); font-weight: 700; letter-spacing: 0.04em;">${c.caseId}</span>
+                      </div>
+                    </div>
+                    <div class="case-card-body">
+                      <h5 class="fw-bold mb-1 text-dark">${c.animalType} <span class="fw-semibold fs-6" style="color: #475569;">(${c.animalCondition})</span></h5>
+                      <p class="small mb-2 text-truncate-2" style="color: #334155 !important; min-height: 2.6rem; line-height: 1.5;">${c.description}</p>
+                      <div class="small mb-3 text-truncate fw-medium" style="color: #475569;">
+                        <i class="bi bi-geo-alt-fill text-danger me-1"></i>${c.locationText}
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center pt-2 border-top mt-auto">
+                        <div>${getStatusBadge(c.status)}</div>
+                        <a href="/pages/track.html?id=${c.caseId}" class="btn btn-sm btn-outline-custom">
+                          Track <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              `;
+            });
+            grid.innerHTML = html;
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    });
+  </script>
+</body>
+</html>

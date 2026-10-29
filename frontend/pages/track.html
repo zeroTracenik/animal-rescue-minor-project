@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Rescue Case — Animal Rescue Connect</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Community Announcement Notice -->
+  <div class="announcement-banner text-center" style="background: linear-gradient(90deg, #042f2e, #0f766e);">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <i class="bi bi-shield-check text-warning me-1"></i>
+        <strong>Live Case Tracking Console:</strong> Monitor responder dispatch, veterinary triage, and recovery status in real time.
+      </div>
+      <div>
+        <a href="/pages/report.html" class="text-white text-decoration-underline">Report an Animal <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <div class="brand-badge">
+          <i class="bi bi-shield-heart-fill"></i>
+        </div>
+        <div>
+          <span class="brand-font fw-bold text-dark fs-5">Animal Rescue Connect</span>
+          <span class="d-none d-sm-block text-muted" style="font-size: 0.72rem; margin-top: -3px;">One Report Can Save a Life</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="/"><i class="bi bi-house me-1"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/report.html"><i class="bi bi-plus-circle me-1 text-danger"></i>Report Animal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/pages/track.html"><i class="bi bi-geo-alt me-1"></i>Track Case</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/cases.html"><i class="bi bi-card-checklist me-1"></i>Rescue Cases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html"><i class="bi bi-info-circle me-1"></i>About</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2" id="navbar-auth-section">
+          <!-- Populated by main.js -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Header -->
+  <div class="bg-white border-bottom py-5">
+    <div class="container text-center max-w-700 mx-auto">
+      <span class="badge bg-teal-subtle text-teal px-3 py-1 rounded-pill fw-semibold mb-2" style="background:#ccfbf1; color:#0f766e;">
+        <i class="bi bi-radar me-1"></i> Real-time Case Tracking
+      </span>
+      <h2 class="fw-bold mb-2">Track Rescue Progress</h2>
+      <p class="text-muted small mb-4">Enter the Case ID provided after submitting your report (e.g. ARC-1021) to check live volunteer status and hospital care.</p>
+
+      <!-- Search Input Bar -->
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="input-group input-group-lg shadow-sm">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+            <input type="text" id="trackCaseInput" class="form-control border-start-0 font-monospace text-uppercase" placeholder="Enter Case ID (e.g. ARC-1021)" style="letter-spacing: 0.05em;">
+            <button class="btn btn-primary-custom px-4" id="btnSearchTrack" onclick="trackCaseFromInput()">
+              <i class="bi bi-arrow-right"></i> Track
+            </button>
+          </div>
+
+          <!-- Quick Test Chips -->
+          <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 mt-3 small">
+            <span class="text-muted">Try sample cases:</span>
+            <button type="button" class="badge bg-light text-dark border py-1 px-2 text-decoration-none" onclick="quickTrackChip('ARC-1021')">ARC-1021 (Critical/On Way)</button>
+            <button type="button" class="badge bg-light text-dark border py-1 px-2 text-decoration-none" onclick="quickTrackChip('ARC-1022')">ARC-1022 (Treatment)</button>
+            <button type="button" class="badge bg-light text-dark border py-1 px-2 text-decoration-none" onclick="quickTrackChip('ARC-1024')">ARC-1024 (Completed)</button>
+            <button type="button" class="badge bg-light text-dark border py-1 px-2 text-decoration-none" onclick="quickTrackChip('ARC-1026')">ARC-1026 (New Report)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tracking Details Area -->
+  <div class="container py-5">
+
+    <!-- Not Found Notice (Hidden by default) -->
+    <div id="trackNotFoundContainer" class="d-none text-center py-5">
+      <div class="display-5 text-warning mb-3"><i class="bi bi-exclamation-circle"></i></div>
+      <h4 class="fw-bold">Case Not Found</h4>
+      <p class="text-muted small mb-3">Please verify the Case ID format (e.g. ARC-1021) or browse public cases.</p>
+      <a href="/pages/cases.html" class="btn btn-outline-custom">View All Cases</a>
+    </div>
+
+    <!-- Live Case Tracking Container -->
+    <div id="trackResultContainer" class="d-none">
+
+      <!-- Case Top Header Card -->
+      <div class="card arc-card p-4 mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-3 border-bottom">
+          <div class="d-flex align-items-center gap-3">
+            <div class="brand-badge" style="width:48px;height:48px;font-size:1.4rem;">
+              <i class="bi bi-clipboard2-pulse-fill"></i>
+            </div>
+            <div>
+              <div class="text-muted small">Tracking Case</div>
+              <h3 class="fw-bold text-dark font-monospace mb-0" id="trackDisplayCaseId">ARC-1021</h3>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-2">
+            <div id="trackPriorityContainer"></div>
+            <div id="trackStatusContainer"></div>
+          </div>
+        </div>
+
+        <!-- 6-Step Visual Timeline Stepper -->
+        <div class="py-3">
+          <div class="tracking-timeline" id="trackProgressStepper">
+            <!-- Dynamically generated 6 steps: Reported -> Assigned -> On the Way -> Rescued -> Treatment -> Completed -->
+          </div>
+        </div>
+
+        <div class="text-center text-muted small pt-2">
+          <i class="bi bi-clock-history me-1"></i> Reported on: <span id="trackDate" class="fw-semibold text-dark"></span>
+        </div>
+      </div>
+
+      <!-- Main Breakdown Grid -->
+      <div class="row g-4">
+        <!-- Left Column: Animal & Situation Information -->
+        <div class="col-lg-7">
+          <div class="card arc-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3"><i class="bi bi-info-circle me-2 text-primary"></i>Case Information</h5>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-5">
+                <img id="trackPhoto" src="" alt="Animal" class="img-fluid rounded-3 border shadow-sm w-100" style="height: 180px; object-fit: cover;">
+                <div id="trackPhotosGallery" class="d-flex flex-wrap gap-2 mt-2"></div>
+              </div>
+              <div class="col-sm-7">
+                <div class="mb-2">
+                  <span class="text-muted small d-block">Animal & Condition:</span>
+                  <strong class="text-dark fs-6" id="trackAnimalType">Dog</strong>
+                </div>
+                <div class="mb-2">
+                  <span class="text-muted small d-block">Reported Location:</span>
+                  <div class="small text-secondary" id="trackLocation"><i class="bi bi-geo-alt text-danger me-1"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 mb-3">
+              <span class="text-muted small d-block mb-1 fw-bold">Situation Notes:</span>
+              <p class="small text-dark mb-0" id="trackDescription"></p>
+            </div>
+
+            <!-- Assigned Team Card -->
+            <div class="border rounded-3 p-3">
+              <h6 class="fw-bold text-dark mb-2"><i class="bi bi-people-fill text-teal me-1" style="color:#0d9488;"></i>Assigned Rescue Support</h6>
+              <div class="row g-2 small">
+                <div class="col-sm-6">
+                  <div class="text-muted">Rescue NGO / Hospital:</div>
+                  <strong class="text-dark" id="trackNgoName">PawsCare Shelter</strong>
+                  <div class="text-muted" id="trackNgoPhone" style="font-size:0.75rem;"></div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-muted">Assigned Responder:</div>
+                  <strong class="text-dark" id="trackVolunteerName">Pending Dispatch</strong>
+                  <div class="text-muted" id="trackVolunteerPhone" style="font-size:0.75rem;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Audit Trail & Activity Logs -->
+        <div class="col-lg-5">
+          <div class="card arc-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3"><i class="bi bi-journal-text me-2 text-primary"></i>Rescue Activity Logs</h5>
+            <p class="text-muted small mb-4">Timestamped verification logs of every action taken by the rescue team.</p>
+
+            <div id="trackActivityLogs" class="ps-1">
+              <!-- Logs injected dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container text-center text-muted small">
+      &copy; 2026 Animal Rescue Connect • Dedicated Community Animal Care & Rescue Network
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/track.js"></script>
+</body>
+</html>

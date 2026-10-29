@@ -1,0 +1,472 @@
+[
+  {
+    "id": 1021,
+    "caseId": "ARC-1021",
+    "animalType": "Dog",
+    "animalCondition": "Hit and Run",
+    "priority": "Critical",
+    "description": "Hit by speeding four-wheeler near Sitabuldi flyover pillar 12. Hind leg bleeding and fracture, unable to stand, sheltered near road divider.",
+    "locationText": "Near Sitabuldi Metro Station & Flyover Pillar 12, Nagpur",
+    "latitude": 21.1448,
+    "longitude": 79.0835,
+    "photoUrl": "/public/images/cases/case-1021.jpg",
+    "reporterName": "Priya Sharma",
+    "reporterPhone": "+91 98224 55667",
+    "status": "Treatment",
+    "assignedNgoId": "NGO-02",
+    "assignedNgoName": "People For Animals (PFA) Nagpur",
+    "assignedVolunteerId": "VOL-01",
+    "assignedVolunteerName": "Sagar Wankhede",
+    "createdAt": "2026-10-08T07:15:00.000Z",
+    "updatedAt": "2026-10-09T06:07:23.856Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T07:15:00.000Z",
+        "note": "Incident reported by citizen Priya Sharma with live GPS coordinates at Sitabuldi."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-08T07:22:00.000Z",
+        "note": "Assigned to PFA Nagpur; field responder Amit Meshram dispatched."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-08T07:35:00.000Z",
+        "note": "Ambulance van en route with splint kit and stretcher."
+      },
+      {
+        "status": "Treatment",
+        "timestamp": "2026-10-08T18:24:42.186Z",
+        "note": "Status transitioned to \"Treatment\" by Smita Mire (SSAF Nagpur)."
+      }
+    ],
+    "statusNote": "Status transitioned to \"Treatment\" by Smita Mire (SSAF Nagpur)."
+  },
+  {
+    "id": 1022,
+    "caseId": "ARC-1022",
+    "animalType": "Cat",
+    "animalCondition": "Deep Wound & Dehydration",
+    "priority": "Urgent",
+    "description": "Young feline trapped in market alley behind medical stores near GMC, visible deep puncture wound on flank, unable to walk properly.",
+    "locationText": "Behind Medical Square Market, Near GMC Hospital Gate, Nagpur",
+    "latitude": 21.1275,
+    "longitude": 79.098,
+    "photoUrl": "/public/images/cases/case-1022.jpg",
+    "reporterName": "Gaurav Joshi",
+    "reporterPhone": "+91 98231 44552",
+    "status": "Treatment",
+    "assignedNgoId": "NGO-02",
+    "assignedNgoName": "People For Animals (PFA) Nagpur",
+    "assignedVolunteerId": "VOL-04",
+    "assignedVolunteerName": "Pooja Kulkarni",
+    "createdAt": "2026-10-07T14:10:00.000Z",
+    "updatedAt": "2026-10-08T09:00:00.000Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-07T14:10:00.000Z",
+        "note": "Reported by shopkeeper Gaurav near Medical Square."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-07T14:20:00.000Z",
+        "note": "Assigned to PFA Nagpur shelter clinic."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-07T14:40:00.000Z",
+        "note": "Pooja Kulkarni dispatched with cat rescue carrier."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-07T15:25:00.000Z",
+        "note": "Cat safely secured in carrier and transported to veterinary center."
+      },
+      {
+        "status": "Treatment",
+        "timestamp": "2026-10-07T16:30:00.000Z",
+        "note": "Wound dressed with antiseptic, antibiotics administered, IV fluids running."
+      }
+    ]
+  },
+  {
+    "id": 1023,
+    "caseId": "ARC-1023",
+    "animalType": "Cow",
+    "animalCondition": "Open Trauma / Ingestion Issue",
+    "priority": "Critical",
+    "description": "Calf collapsed on main carriageway near Ajni Square during morning rush hour, bleeding near shoulder, heavy traffic danger.",
+    "locationText": "Near Ajni Square Flyover, Wardha Road, Nagpur",
+    "latitude": 21.118,
+    "longitude": 79.076,
+    "photoUrl": "/public/images/cases/case-1023.jpg",
+    "reporterName": "Nitin Raut",
+    "reporterPhone": "+91 98223 99881",
+    "status": "Rescued",
+    "assignedNgoId": "NGO-02",
+    "assignedNgoName": "People For Animals (PFA) Nagpur",
+    "assignedVolunteerId": "VOL-03",
+    "assignedVolunteerName": "Amit Meshram",
+    "createdAt": "2026-10-07T18:00:00.000Z",
+    "updatedAt": "2026-10-07T20:15:00.000Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-07T18:00:00.000Z",
+        "note": "Road safety hazard reported with collapsed calf on Wardha Road."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-07T18:05:00.000Z",
+        "note": "Hydraulic animal ambulance dispatched from PFA Nagpur."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-07T18:20:00.000Z",
+        "note": "Ambulance team en route with vet assistant."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-07T20:15:00.000Z",
+        "note": "Calf safely loaded via hydraulic ramp; shifted to sanctuary trauma ward."
+      }
+    ]
+  },
+  {
+    "id": 1024,
+    "caseId": "ARC-1024",
+    "animalType": "Bird (Pigeon)",
+    "animalCondition": "Manja / Thread Entanglement",
+    "priority": "Urgent",
+    "description": "Pigeon hung upside down from branch due to kite thread (manja) tangled around wings near Shukrawari lake. Weak wing flapping.",
+    "locationText": "Banyan Tree near Gandhi Sagar Lake (Shukrawari Talao), Mahal, Nagpur",
+    "latitude": 21.145,
+    "longitude": 79.102,
+    "photoUrl": "/public/images/cases/case-1024.jpg",
+    "reporterName": "Rohan Agrawal",
+    "reporterPhone": "+91 98235 77112",
+    "status": "Completed",
+    "assignedNgoId": "NGO-01",
+    "assignedNgoName": "Save Speechless Animals Foundation (SSAF Nagpur)",
+    "assignedVolunteerId": "VOL-01",
+    "assignedVolunteerName": "Sagar Wankhede",
+    "createdAt": "2026-10-06T11:00:00.000Z",
+    "updatedAt": "2026-10-08T18:26:54.561Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-06T11:00:00.000Z",
+        "note": "Report received from citizen near Gandhi Sagar."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-06T11:15:00.000Z",
+        "note": "Assigned to SSAF Nagpur responder Sagar Wankhede with ladder."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-06T11:30:00.000Z",
+        "note": "Volunteer reached Gandhi Sagar area."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-06T12:10:00.000Z",
+        "note": "Pigeon safely freed from sharp manja."
+      },
+      {
+        "status": "Treatment",
+        "timestamp": "2026-10-06T12:45:00.000Z",
+        "note": "Wing wound cleaned with betadine, resting in aviary."
+      },
+      {
+        "status": "Completed",
+        "timestamp": "2026-10-06T14:40:00.000Z",
+        "note": "Bird fully recovered flight capability and successfully released."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-08T18:26:51.862Z",
+        "note": "Status updated by Field Responder to On the Way."
+      },
+      {
+        "status": "Completed",
+        "timestamp": "2026-10-08T18:26:54.561Z",
+        "note": "Status updated by Field Responder to Completed."
+      }
+    ],
+    "statusNote": "Status updated by Field Responder to Completed."
+  },
+  {
+    "id": 1025,
+    "caseId": "ARC-1025",
+    "animalType": "Dog",
+    "animalCondition": "Severe Skin Disease (Mange)",
+    "priority": "Moderate",
+    "description": "Community indie dog suffering from extreme mange, hair loss, and shivering under a parked bus near Pratap Nagar garden.",
+    "locationText": "Near Pratap Nagar Ring Road Garden, Nagpur",
+    "latitude": 21.1155,
+    "longitude": 79.055,
+    "photoUrl": "/public/images/cases/case-1025.jpg",
+    "reporterName": "Kavita Sen",
+    "reporterPhone": "+91 98229 33118",
+    "status": "Assigned",
+    "assignedNgoId": "NGO-03",
+    "assignedNgoName": "Nagpur Paws Animal Rescue & Care Shelter",
+    "assignedVolunteerId": "VOL-05",
+    "assignedVolunteerName": "Chetan Raut",
+    "createdAt": "2026-10-08T08:30:00.000Z",
+    "updatedAt": "2026-10-08T09:15:00.000Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T08:30:00.000Z",
+        "note": "Reported with photos of skin infection."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-08T09:15:00.000Z",
+        "note": "Assigned to Nagpur Paws. Medicated bath and on-site treatment scheduled."
+      }
+    ]
+  },
+  {
+    "id": 1026,
+    "caseId": "ARC-1026",
+    "animalType": "Dog",
+    "animalCondition": "Suspected Limb Fracture",
+    "priority": "Critical",
+    "description": "Brown stray dog limping severely, unable to put any weight on front right paw after getting struck by auto rickshaw near Mount Road.",
+    "locationText": "Near Sadar Residency Road, Mount Road Junction, Nagpur",
+    "latitude": 21.163,
+    "longitude": 79.081,
+    "photoUrl": "/public/images/cases/case-1026.jpg",
+    "reporterName": "Deepak Chawla",
+    "reporterPhone": "+91 98233 44110",
+    "status": "On the Way",
+    "assignedNgoId": "NGO-03",
+    "assignedNgoName": "Nagpur Paws Animal Rescue & Care Shelter",
+    "assignedVolunteerId": "VOL-01",
+    "assignedVolunteerName": "Sagar Wankhede",
+    "createdAt": "2026-10-08T11:45:00.000Z",
+    "updatedAt": "2026-10-08T18:41:43.558Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T11:45:00.000Z",
+        "note": "Case logged by citizen in Sadar. Nearest NGO automatically matched."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-08T18:25:18.084Z",
+        "note": "Report accepted by NGO response center triage."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-08T18:41:35.221Z",
+        "note": "Rescue case accepted by field volunteer Sagar Wankhede. Volunteer is dispatched and on the way."
+      }
+    ],
+    "statusNote": "Status updated by Field Responder to \"On the Way\"."
+  },
+  {
+    "id": 1027,
+    "caseId": "ARC-1027",
+    "animalType": "Cat",
+    "animalCondition": "Abandoned Kittens",
+    "priority": "Low / Shelter Care",
+    "description": "Litter of 3 newborn kittens found inside a cardboard box near public park gate. Mother nowhere in sight.",
+    "locationText": "Children Traffic Park Lane, Dharampeth, West Nagpur",
+    "latitude": 21.142,
+    "longitude": 79.062,
+    "photoUrl": "/public/images/cases/case-1027.jpg",
+    "reporterName": "Simran Kaur",
+    "reporterPhone": "+91 98226 12098",
+    "status": "Treatment",
+    "assignedNgoId": "NGO-03",
+    "assignedNgoName": "Nagpur Paws Animal Rescue & Care Shelter",
+    "assignedVolunteerId": "VOL-05",
+    "assignedVolunteerName": "Chetan Raut",
+    "createdAt": "2026-10-05T09:00:00.000Z",
+    "updatedAt": "2026-10-06T11:00:00.000Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-05T09:00:00.000Z",
+        "note": "Abandoned kittens reported in Dharampeth."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-05T09:20:00.000Z",
+        "note": "Nagpur Paws field responder Chetan Raut assigned."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-05T09:40:00.000Z",
+        "note": "Responder en route."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-05T10:30:00.000Z",
+        "note": "Kittens collected safely and placed in warm incubator."
+      },
+      {
+        "status": "Treatment",
+        "timestamp": "2026-10-06T11:00:00.000Z",
+        "note": "Bottle feeding and neonatal observation active."
+      }
+    ]
+  },
+  {
+    "id": 1028,
+    "caseId": "ARC-1028",
+    "animalType": "Dog",
+    "animalCondition": "Puppy Trapped in Drain",
+    "priority": "Urgent",
+    "description": "Two-month-old indie puppy fell into uncovered stormwater drain, yelping loudly. Drain depth ~3 feet.",
+    "locationText": "Manish Nagar Railway Crossing Underpass, South Nagpur",
+    "latitude": 21.096,
+    "longitude": 79.082,
+    "photoUrl": "/public/images/cases/case-1028.jpg",
+    "reporterName": "Vikas Mehra",
+    "reporterPhone": "+91 98234 66778",
+    "status": "Completed",
+    "assignedNgoId": "NGO-01",
+    "assignedNgoName": "Save Speechless Animals Foundation (SSAF Nagpur)",
+    "assignedVolunteerId": "VOL-01",
+    "assignedVolunteerName": "Sagar Wankhede",
+    "createdAt": "2026-10-04T16:00:00.000Z",
+    "updatedAt": "2026-10-08T18:26:37.612Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-04T16:00:00.000Z",
+        "note": "Reported with exact location at Manish Nagar."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-04T16:10:00.000Z",
+        "note": "Assigned to SSAF Nagpur responder Sagar."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-04T16:25:00.000Z",
+        "note": "Volunteer reached underpass."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-04T17:10:00.000Z",
+        "note": "Puppy safely lifted using rescue net."
+      },
+      {
+        "status": "Treatment",
+        "timestamp": "2026-10-04T17:45:00.000Z",
+        "note": "Cleaned, fed, and checked for internal injuries. Healthy."
+      },
+      {
+        "status": "Completed",
+        "timestamp": "2026-10-04T18:30:00.000Z",
+        "note": "Reunited with mother dog in neighborhood."
+      }
+    ],
+    "statusNote": "Status updated by Field Responder to Completed."
+  },
+  {
+    "id": 1029,
+    "caseId": "ARC-1029",
+    "animalType": "Monkey",
+    "animalCondition": "Electric Shock Burn",
+    "priority": "Critical",
+    "description": "Rhesus macaque suffered electric shock on overhead transformer near walking track, burns on hand, resting on boundary wall.",
+    "locationText": "Near Seminary Hills Walking Track / Japanese Garden, Nagpur",
+    "latitude": 21.168,
+    "longitude": 79.061,
+    "photoUrl": "/public/images/cases/case-1029.jpg",
+    "reporterName": "Tanya Sen",
+    "reporterPhone": "+91 98221 88990",
+    "status": "On the Way",
+    "assignedNgoId": "NGO-02",
+    "assignedNgoName": "People For Animals (PFA) Nagpur",
+    "assignedVolunteerId": "VOL-03",
+    "assignedVolunteerName": "Amit Meshram",
+    "createdAt": "2026-10-08T10:00:00.000Z",
+    "updatedAt": "2026-10-08T10:45:00.000Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T10:00:00.000Z",
+        "note": "Wildlife injury reported near Seminary Hills."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-08T10:15:00.000Z",
+        "note": "PFA Nagpur wildlife ambulance unit dispatched."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-08T10:45:00.000Z",
+        "note": "Rescue team en route with specialized net and burn kit."
+      }
+    ]
+  },
+  {
+    "id": 1030,
+    "caseId": "ARC-1030",
+    "animalType": "Dog",
+    "animalCondition": "Mild Limp & Starvation",
+    "priority": "Moderate",
+    "description": "Old indie dog very weak and malnourished, moving slowly with mild limp near college entrance.",
+    "locationText": "Outside VNIT Main Gate, Abhyankar Nagar / Bajaj Nagar, Nagpur",
+    "latitude": 21.124,
+    "longitude": 79.051,
+    "photoUrl": "/public/images/cases/case-1030.jpg",
+    "reporterName": "Abhishek Patil",
+    "reporterPhone": "+91 98236 11223",
+    "status": "On the Way",
+    "assignedNgoId": "NGO-02",
+    "assignedNgoName": "People For Animals (PFA) Nagpur",
+    "assignedVolunteerId": "VOL-01",
+    "assignedVolunteerName": "Sagar Wankhede",
+    "createdAt": "2026-10-08T12:30:00.000Z",
+    "updatedAt": "2026-10-09T06:08:36.656Z",
+    "timeline": [
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T12:30:00.000Z",
+        "note": "Citizen reported geriatric street dog near VNIT Nagpur gate."
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-08T18:25:40.282Z",
+        "note": "Report accepted by NGO response center triage."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-08T18:40:09.059Z",
+        "note": "Rescue case accepted by field volunteer Sagar Wankhede. Volunteer is dispatched and on the way."
+      },
+      {
+        "status": "Rescued",
+        "timestamp": "2026-10-08T18:40:09.068Z",
+        "note": "Animal caught with towel and secured."
+      },
+      {
+        "status": "Reported",
+        "timestamp": "2026-10-08T18:40:21.063Z",
+        "note": "Status updated to Reported"
+      },
+      {
+        "status": "Assigned",
+        "timestamp": "2026-10-09T06:06:57.936Z",
+        "note": "Report accepted by NGO response center triage."
+      },
+      {
+        "status": "On the Way",
+        "timestamp": "2026-10-09T06:08:36.656Z",
+        "note": "Rescue case accepted by field volunteer Sagar Wankhede. Volunteer is dispatched and on the way."
+      }
+    ],
+    "statusNote": "Rescue case accepted by field volunteer Sagar Wankhede. Volunteer is dispatched and on the way."
+  }
+]

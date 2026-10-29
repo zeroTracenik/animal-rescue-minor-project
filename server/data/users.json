@@ -1,0 +1,74 @@
+[
+  {
+    "id": "USR-01",
+    "name": "System Administrator",
+    "email": "admin@rescue.org",
+    "phone": "+91 98230 00000",
+    "passwordHash": "$2a$10$LLGBZ9m8/AXvNTQRca3wXutddmb2ZMOMScz65rEkTati9.7q81j9q",
+    "role": "admin",
+    "ngoId": null,
+    "createdAt": "2026-09-01T10:00:00.000Z"
+  },
+  {
+    "id": "USR-02",
+    "name": "Smita Mire (SSAF Nagpur)",
+    "email": "ssaf@nagpurrescue.org",
+    "phone": "+91 98230 45671",
+    "passwordHash": "$2a$10$.5wDmt0n1lv9XbdSBzkO5OFSXM.OuMey6D4MSs2yyDfj5ZIAF77Oi",
+    "role": "ngo",
+    "ngoId": "NGO-01",
+    "createdAt": "2026-09-02T11:00:00.000Z"
+  },
+  {
+    "id": "USR-03",
+    "name": "Karishma Galani (PFA Nagpur)",
+    "email": "pfa@nagpurrescue.org",
+    "phone": "+91 98222 12345",
+    "passwordHash": "$2a$10$KM6dzqIaj7zyooSU9RA3zu3JJMQLVB3NWaERD69SufZqv3GjPZawm",
+    "role": "ngo",
+    "ngoId": "NGO-02",
+    "createdAt": "2026-09-03T09:30:00.000Z"
+  },
+  {
+    "id": "USR-04",
+    "name": "Tanmay Sharma (Nagpur Paws)",
+    "email": "paws@nagpurrescue.org",
+    "phone": "+91 98901 88992",
+    "passwordHash": "$2a$10$Gkq6.3qP3TG/C0GYqVKPg.bxbjGthlS83QMeyNo59ppEZMZvhEyi6",
+    "role": "ngo",
+    "ngoId": "NGO-03",
+    "createdAt": "2026-09-04T10:15:00.000Z"
+  },
+  {
+    "id": "USR-05",
+    "name": "Sagar Wankhede",
+    "email": "sagar@volunteer.org",
+    "phone": "+91 98230 11221",
+    "passwordHash": "$2a$10$VazoTDXseuC3Z8TJbgpnMuIcjVc5PVow6jJt6ysqnxZ7CYQPkEWtW",
+    "role": "volunteer",
+    "volunteerId": "VOL-01",
+    "ngoId": "NGO-01",
+    "createdAt": "2026-09-05T14:15:00.000Z"
+  },
+  {
+    "id": "USR-06",
+    "name": "Amit Meshram",
+    "email": "amit@volunteer.org",
+    "phone": "+91 98222 33441",
+    "passwordHash": "$2a$10$H7z9l8aJuL7wVF6Sd2m7RO/mCxvgQlmSdF4NZWe6Oo2GdQRqSovke",
+    "role": "volunteer",
+    "volunteerId": "VOL-03",
+    "ngoId": "NGO-02",
+    "createdAt": "2026-09-06T15:20:00.000Z"
+  },
+  {
+    "id": "USR-07",
+    "name": "Priya Sharma",
+    "email": "priya@nagpur.org",
+    "phone": "+91 98224 55667",
+    "passwordHash": "$2a$10$2SJxDCdikjqAeRFsArZ2/emzihGVSDPEpoI.21UMITtlc5wNcbQ1S",
+    "role": "citizen",
+    "ngoId": null,
+    "createdAt": "2026-09-10T12:00:00.000Z"
+  }
+]

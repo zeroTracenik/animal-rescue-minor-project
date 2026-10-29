@@ -1,0 +1,32 @@
+{
+  "name": "animal-rescue-connect",
+  "version": "1.0.0",
+  "description": "Animal Rescue Connect (ARC) — Community Emergency Animal Rescue & Spatial Dispatch Coordination Platform (College Minor Project)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "test": "node -e \"console.log('Validating database module...'); require('./server/data/db'); console.log('All modules loaded successfully!');\"",
+    "reset-db": "node -e \"require('./server/data/db').resetDatabase(); console.log('Database reset to fresh Nagpur demo data!');\""
+  },
+  "keywords": [
+    "animal-rescue",
+    "college-minor-project",
+    "emergency-response",
+    "haversine-algorithm",
+    "geolocation-dispatch",
+    "volunteer-gamification",
+    "express",
+    "bootstrap",
+    "full-stack"
+  ],
+  "author": "Nikshay Ghode (2nd Year B.Tech CSE Cybersecurity - G H Raisoni SkillTech University Nagpur)",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
