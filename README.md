@@ -241,7 +241,7 @@ animal-rescue-connect/
 
 ### Step 1: Clone the Repository
 ```bash
-https://github.com/zeroTracenik/animal-rescue-minor-project
+git clone https://github.com/zeroTracenik/animal-rescue-minor-project.git
 cd animal-rescue-connect
 ```
 
